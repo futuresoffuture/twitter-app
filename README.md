@@ -9,3 +9,7 @@
 ### Install Docker Desktop. Please select the binary to install based on type of machine(windows/linux/mac) that you use.
     https://www.docker.com/products/docker-desktop
 ### Java JDK 1.8 or the latest for building the micro service.
+
+## How to download this service and Run in your local
+#### Checkout this code
+     
