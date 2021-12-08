@@ -14,7 +14,19 @@ https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/se
     https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 ### Install Postman or similar API Tool. Link to install postman.
     https://www.postman.com/downloads/
-
+### Install nodeJs
+    https://nodejs.org/ru/blog/release/v14.5.0/
+### Install npm 
+    npm install -g npm
+### Install yarn
+    https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable
+### Add axios
+    yarn add axios
+### Install Vue JS
+    npm install vue
+### add nuxt    
+    yarn add nuxt
+    
 ## Step:2 How to download this service and Run in your local
 
 ## Set up the code in local
