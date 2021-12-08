@@ -1,4 +1,4 @@
-# twitter-app
+# Microservices & Cloud Based Architecture
 
 ## Step:1 Pre-requisites & Installation
 ### Laptop with access to the Internet
