@@ -18,11 +18,13 @@ public class TweetController {
         return tweetService.getStatus();
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @PostMapping("/tweet")
     public void postTweet(@RequestBody TweetDTO tweet, @RequestParam String userId) {
         tweetService.postTweet(tweet, userId);
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/timelines")
     public List<TweetDTO> getTweets(@RequestParam String userId) {
        return tweetService.getTweetsByUserId(userId);

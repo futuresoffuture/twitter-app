@@ -18,8 +18,33 @@ public class TwitterApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/twitter-app/*")
-						.allowedOrigins("*");
+				registry
+						.addMapping("/**")
+						.allowedOrigins("*")
+						.allowedMethods("*")
+						.allowedHeaders(
+								"Access-Control-Allow-Headers",
+								"Access-Control-Allow-Origin",
+								"Access-Control-Request-Method",
+								"Access-Control-Request-Headers",
+								"Origin",
+								"Cache-Control",
+								"Content-Type",
+								"Content-Length",
+								"Host",
+								"User-Agent",
+								"Accept",
+								"Accept-Encoding",
+								"Connection",
+								"Postman-Token",
+								"Cookie",
+								"Authorization",
+								"clientId",
+								"clientSecret",
+								"External-Partner-Token")
+						.allowCredentials(true)
+						.exposedHeaders("Access-Control-Allow-Origin")
+						.maxAge(3600);
 			}
 		};
 	}
