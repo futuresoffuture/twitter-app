@@ -1,0 +1,33 @@
+{
+  "TableName": "tweet",
+  "KeySchema": [
+    { "AttributeName": "id", "KeyType": "HASH" },
+    { "AttributeName": "userId", "KeyType": "RANGE" }
+  ],
+  "AttributeDefinitions": [
+    { "AttributeName": "id", "AttributeType": "S" },
+    { "AttributeName": "userId", "AttributeType": "S" }
+  ],
+  "GlobalSecondaryIndexes": [
+    {
+      "IndexName": "userid-index",
+      "KeySchema": [
+        {
+          "KeyType": "HASH",
+          "AttributeName": "userId"
+        }
+      ],
+      "Projection": {
+        "ProjectionType": "ALL"
+      },
+      "ProvisionedThroughput": {
+        "ReadCapacityUnits": 5,
+        "WriteCapacityUnits": 5
+      }
+    }
+  ],
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 5,
+    "WriteCapacityUnits": 5
+  }
+}

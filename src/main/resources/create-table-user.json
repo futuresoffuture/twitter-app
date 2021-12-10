@@ -1,0 +1,15 @@
+{
+  "TableName": "user",
+  "KeySchema": [
+    { "AttributeName": "id", "KeyType": "HASH" },
+    { "AttributeName": "userId", "KeyType": "RANGE" }
+  ],
+  "AttributeDefinitions": [
+    { "AttributeName": "id", "AttributeType": "S" },
+    { "AttributeName": "userId", "AttributeType": "S" }
+  ],
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 5,
+    "WriteCapacityUnits": 5
+  }
+}
