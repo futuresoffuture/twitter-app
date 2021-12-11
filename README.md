@@ -1,37 +1,11 @@
 # twitter-app
 
-## Step:1 Pre-requisites & Installation
-### Laptop with access to the Internet
-### Install Intellij or your choice of IDE to build a java based microservice. Link to download IntelliJ for your machine.
-    Windows: https://www.jetbrains.com/idea/download/#section=windows
-    Linux: https://www.jetbrains.com/idea/download/#section=linux
-    Mac: https://www.jetbrains.com/idea/download/#section=mac
-### Install Docker Desktop. Please select the binary to install based on type of machine(windows/linux/mac) that you use.
-    https://www.docker.com/products/docker-desktop
-https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/set-up-environment?tabs=Windows-10-and-11#install-docker
-### Java JDK 1.8 or the latest for building the microservice.
-### Install git 
-    https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-### Install Postman or similar API Tool. Link to install postman.
-    https://www.postman.com/downloads/
-### Install nodeJs
-    https://nodejs.org/ru/blog/release/v14.5.0/
-### Install npm 
-    npm install -g npm
-### Install yarn
-    https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable
-### Add axios
-    yarn add axios
-### Install Vue JS
-    npm install vue
-### add nuxt    
-    yarn add nuxt
-    
-## Step:2 How to download this service and Run in your local
-
-## Set up the code in local
-### Open IntelliJ 
+## Steps to run them in the local
+### Step:1 Open IntelliJ in your machine
 ![image](https://user-images.githubusercontent.com/95593635/144771664-af0d0122-3fa4-4004-acbd-72f6ce8644e3.png)
+
+### Step: 2 Open the twitter-app service downloaded from the github
+![img_2.png](img_2.png)
 
 ### Go to the Terminal located at the bottom of the IntelliJ and run gradle build.
 Command "gradle.bat build" for windows machines. "gradlew build" for Linux/Unix/Mac
@@ -41,7 +15,17 @@ Command "gradle.bat build" for windows machines. "gradlew build" for Linux/Unix/
 go to application -> bootRun -> Right click and Run it.
 ![img_1.png](img_1.png)
 
-### Open your code in your IntelliJ
-     
-## Gradle
- - It is a build tool used to build and package the microservice similar to Maven.
+### Open Postman or a browser and hit the below URL to make sure it is running.
+http://localhost:8090/twitter-app/status
+
+### Step:2 Running AWS DynamoDB in local.
+#### Open a terminal/Commandline -> go to the location where you see docker-compose.yml file.
+#### Run "docker-compose up" command and leave the terminal open.
+![img_3.png](img_3.png)
+
+### Step: 3 Creating tables in DynamoDB
+#### Open a new terminal shell and Run the first three commands in db.sql file one by one.
+You would find this file as part of the twitter-app under
+twitter-app/src/main/resources/db.sql
+
+### Hay!!! We should be able to Test it Now !!!
